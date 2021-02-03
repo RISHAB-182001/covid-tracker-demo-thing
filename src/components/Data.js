@@ -11,6 +11,11 @@ export class Data extends Component {
         covid_data: [],
         show_country: null
     }
+const client = new StreamrClient({
+    auth:{
+        privateKey:'74b40b01771d91d4c0df23c0203249c7dfc9e51ff76d22b6479aacd123174615'
+    }
+})
 
     componentDidMount() {
         axios.get("https://covid19.mathdro.id/api/countries")
